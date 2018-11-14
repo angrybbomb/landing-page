@@ -38,14 +38,14 @@ Set the `max-width` to `1170px`.
 
 Add the `container` class that was just created to the following HTML elements in `index.html`:
 
-- First `<div>` in the `<nav>`
+- First `<div>` in the `<nav>`.
 - First `<div>` in the `<!-- HERO -->` `<section>`.
 - First `<div>` in the `<!-- MAIN CONTAINER -->` block.
-- The first `<section>` in the `<footer>`
+- The first `<section>` in the `<footer>`.
 
 ## 1.3 - Sections as Flex Containers
 
-@sections-flex Make each `<section>` element in the `index.html`  file a `flex` container by setting the `display` property to the correct value.
+@sections-flex In `main.css` create a rule that selects all `<section>` elements in the `index.html`. Adjust the `display` property in this rule so that each `<section>` acts as a `flex` container.
 
 ## 1.4 - Flex Utilities
 
@@ -124,7 +124,7 @@ Add the `container` class that was just created to the following HTML elements i
 
 ## 1.10 - Buttons
 
-@button-utilities Each button will have a consistent look and feel. With `main.css` still open, add the class `.btn` with the following styles:
+@button-utilities Each button will have a consistent look and feel. In `main.css`, add the class `.btn` with the following styles:
 - add a cursor
 - remove any borders
 - padding should be `6px` top and bottom and `12px` left and right
@@ -135,10 +135,10 @@ Also, Create two different button styles `btn-default` and `btn-primary`. The co
 
 ## 1.11 - Buttons Class Attribute
 
-@button-utilities-class-attribute In `index.html`, find the only `<a>` element in the `<!-- FULL BANNER -->` block. Give this element the `.btn` class and the button `default` class.
+@button-utilities-class-attribute In `index.html`, find the only `<a>` element in the `<!-- FULL BANNER -->` block. Give this element the `.btn` class and the button `btn-default` class.
 
 Then, Find the sign up `<button>` element in the `<footer>`.
-Give this element the `btn` class and the button `primary` class.
+Give this element the `btn` class and the button `btn-primary` class.
 
 ## 1.12 - Form Controls
 
@@ -245,7 +245,7 @@ Finally, select all the links that are descendant of all elements with a class o
 
 ## 2.12 - Profile Picture
 
-@profile-picture We'll round the profile picture and size it down. Create a class called `.profile-pic` in `main.css`. Make the size of the profile picture container `60x60`. Then create a rule that selects the all descendant `img` elements of `.profile-pic`. To round the image set the `border-radius` to `100px`. Make sure the image fits in the container set `max-width` to `100%`.
+@profile-picture We'll round the profile picture and size it down. Create a class called `.profile-pic` in `main.css`. Make the size of the profile picture container `60x60`. Then create a rule that selects all descendant `img` elements of `.profile-pic`. To round the image set the `border-radius` to `100px`. Make sure the image fits in the container set `max-width` to `100%`.
 
 ## 2.13 - Profile Class Attribute
 
@@ -261,9 +261,9 @@ In the `<!-- PROFILE -->` block assign the first `<div>` the class `profile`. Ad
 
 For the image, construct a class called `.hero` that adjusts several background properties. 
 
-Center the image horizontally and vertically using `background-position`. 
+Set `background-image` to `url('../img/hero.jpg')`, height to `400px`, and `background-size` to `cover`.
 
-Set `background-size` to `cover`, height to `400px` and `background-image` to `url('../img/hero.jpg')`.
+Center the image horizontally and vertically using `background-position`. 
 
 Finally, transform the text to `uppercase`. 
 
@@ -366,30 +366,25 @@ To start, create a `.full-banner` class that sets some box model properties. Set
 
 ## 4.2 - Full Banner Border
 
-@full-banner-border For the border, we'll use the `.full-banner` class selector and the pseudo-class `:before`. Because we're using `:before`, set `content` to `""` so there is something to style. Next, set the border to `1px solid #ffffff`.
+@full-banner-border For the border, we'll use the `.full-banner` class selector and the pseudo-class `:before`. Because we're using `:before`, set `content` to `""` so there is something to style.
 
-Because we used `relative` positioning for the `.full-banner`, we can use absolute positioning in this rule. Set `position` to `absolute`. With this set, we can adjust the top, bottom, left and right. Use, `30px`,  `30px`,  `50px`,  `50px` respectively. Bring the border to the front using `z-index: 1`.
+Because we used `relative` positioning for the `.full-banner`, we can use absolute positioning in this rule. Set `position` to `absolute`. Next, set the border to `1px solid #ffffff`. With this set, we can adjust the top, bottom, left and right. Use, `30px`,  `30px`,  `50px`,  `50px` respectively. Bring the border to the front using `z-index: 1`.
 
 ## 4.3 - Full Banner Image
 
 @full-banner-image Next, let's use the flex property to have the image take up 60% of the width of the banner. Set `flex` to `0 0 58.333333%` in a rule with a selector of `.full-banner-image`. 
 
-Set background size, image, and position to `url('../img/vista.jpg')`, `cover`, and `top center`, respectively. Set the minimum height of the image to `400px`.
+Set, background image, size, and position to `vista.jpg`, `cover`, and `top center`, respectively. Set the minimum height of the image to `400px`.
 
 ## 4.4 - Full Banner Sidebar
 
 @full-banner-sidebar The text of the banner is on the right and takes up 40% of the width of the banner, so use flex: 0 0 41.666667% in a rule with a selector of .full-banner-sidebar to adjust this. 
 
-Add a few more declarations to the rule that transform the text to uppercase and color it white.
-
-To finish the sidebar set the following properties:
-
-- `background-color` - `#364147`
-- `padding` - `30px`
+Set the `background-color` to `#364147`, transform the text to uppercase, add `padding` of `30px` and change the text color to white(`#ffffff`).
 
 ## 4.5 - Full Banner Sidebar Heading
 
-@full-banner-sidebar-heading Style the `<h4>` heading in the full banner by creating a rule with a selector of `.full-banner-sidebar h4` and adding these font declarations - size(`40px`), weight(`700`), style(`italic`), color(`#637f94`), and overwrite the line height(`1`).
+@full-banner-sidebar-heading Style the `<h4>` heading in the full banner by creating a rule with a selector of `.full-banner-sidebar h4` and adding these font declarations - size(`40px`), weight(`700`),  color(`#637f94`), style(`italic`), and overwrite the line height(`1`).
 
 ## 4.6 - Full Banner Sidebar Text Decoration
 
@@ -417,7 +412,7 @@ Select the second `<div>` in the side bar using the group of selectors `.full-ba
 
 ## 4.8 - Full Banner Sidebar Button
 
-@full-banner-sidebar-button Finally, let's create a rule to style the button in the sidebar. Select the button using any method and add these declarations - a top margin of `50px`, make the text `uppercase` and change the letter spacing to `1px`. Make sure the button is first in the stacking order by changing the `z-index` to `1`. 
+@full-banner-sidebar-button Finally, let's create a rule to style the button in the sidebar. Select the button using `.full-banner-sidebar .btn.btn-default` - a top margin of `50px`, make the text `uppercase` and change the letter spacing to `1px`. Make sure the button is first in the stacking order by changing the `z-index` to `1`. 
 
 ## 4.9 - Full Banner Class Attributes
 
@@ -429,19 +424,19 @@ Select the second `<div>` in the side bar using the group of selectors `.full-ba
 
 @footer The footer completes the landing page. It is divided into two sections - the footer links and a demonstration message. 
 
-To style, the footer select the `<footer>` element and make it a flex container with `flex-wrap` enabled(`wrap`). Set `position` to `relative`, `z-index` to `0`, and minimum height to `330px`. Make the background color `black`. 
+To style the footer open `main.css` and and create a rule that selects the `<footer>` element. Make it a flex container with `flex-wrap` enabled(`wrap`). Set `position` to `relative`, `z-index` to `0`, and minimum height to `330px`. Make the background color `black`. 
 
 ## 5.2 - Footer Sidebar
 
-@footer-sidebar Dynamically set the content after the footer to `""`. **Hint: Use the `:after` pseudo-class.**
+@footer-sidebar Dynamically set the content after the footer to `""`. **Hint: Use the `:after` pseudo-class.** This will create a sidebar. 
 
-Set the background color of the sidebar to `#a0a0a0` and set the width to `75%`.
+In the same rule(`footer:after`), Set the background color of the sidebar to `#a0a0a0` and set the width to `75%`.
 
-Set the `position` of the element to `absolute`. Now that the element is `absolute`, set top, bottom, left and right to `0`. Finally set `z-index` to `-1`.
+Set the `position` of the sidebar to `absolute`. Now that the element is `absolute`, set top, bottom, left and right to `0`. Finally set `z-index` to `-1`.
 
 ## 5.3 - Lists
 
-@lists All of the content contained in the footer is in unordered lists. To equally space these lists, create a `.lists` rule and set `flex` to `0 0 75%`. Add a gap between these columns that adds up to `30px`(left/right - `15px`). The top and bottom should be set to `40px`.
+@lists All of the content contained in the footer is in unordered lists. To equally space these lists, create a `.lists` rule and set `flex` to `0 0 75%`. Add a gap between these columns that adds up to `30px`(left/right - `15px`). The top and bottom padding should be set to `40px`.
 
 ## 5.4 - Link Headers
 
@@ -481,19 +476,19 @@ The links in the social list (`.social ul li a`), should have the following styl
 
 ## 5.10 - Newsletter Headers
 
-@newsletter-headers Below the social icons there is a newsletter section. This block has two `<div>`'s that need styling. Create two rules, one that has the properties:
+@newsletter-headers Below the social icons there is a newsletter section. This block has two `<div>`'s that need styling. Create two rules, one that has the selector `.newsletter .link-header` and has the properties:
 
 - `font-size` - `12px` 
 - `font-weight` - `400`
 - `margin-bottom` - `5px`
 
-A second that has a font style(`italic`), size(`12px`), weight(`400`), and a bottom margin(`15px`).
+The second should have a selector of `.newsletter .link-subheader` and declarations that adjust the following: font style(`italic`), size(`12px`), weight(`400`), and a bottom margin(`15px`).
 
 ## 5.11 - Newsletter Form
 
-@newsletter-form In this newsletter section there is also an `<input>` and a `<button>`. The `<input>` should have a `border` of `1px solid #364147`,  `width` of `200px` and bottom margin of `10px`
+@newsletter-form In this newsletter section there is also an `<input>` and a `<button>`. To select just this `<input>`create use the selector `.newsletter input`. The `<input>` should have a `border` of `1px solid #364147`,  `width` of `200px` and bottom margin of `10px`. 
 
-The button needs the following styles: 
+Select just this `<button>` with `.newsletter button` and style it with these properties: 
 - `width` - `150px`
 - `min-width` - `auto`
 - `text-transform` - `uppercase`
@@ -501,7 +496,7 @@ The button needs the following styles:
 
 ## 5.12 - Newsletter Class Attributes
 
-@newsletter-class-attributes Apply all of the necessary classes you have built to the appropriate newsletter HTML elements. 
+@newsletter-class-attributes In `index.html` find the `<div>` after the social icons `<ul>` and apply a class of `newsletter`. Give the nested `<div>` with the content `Email Updates` a class of `link-header`. In the `<div>` immediate below, apply a class of `link-subheader`.
 
 ## 5.13 - Pluralsight Demo Container
 
